@@ -55,7 +55,7 @@ export function AboutSection({ id }: { id?: string }) {
           </ScrollReveal>
           <div className="mt-6 grid grid-cols-2 gap-3">
             {special.map((s, i) => (
-              <ScrollReveal key={s.title} animation="zoom-in" delay={300 + (i * 100)} className="rounded-lg border border-border bg-card p-4 text-center shadow-sm hover:shadow-md hover:scale-[1.02] transition-all cursor-default">
+              <ScrollReveal key={s.title} animation="zoom-in" delay={300 + (i * 100)} className="rounded-lg border border-white/10 bg-black/20 backdrop-blur-xl p-4 text-center shadow-sm hover:shadow-md hover:bg-black/30 hover:scale-[1.02] transition-all cursor-default">
                 <s.icon className="mx-auto h-7 w-7 text-primary" />
                 <div className="mt-2 whitespace-pre-line text-sm font-medium text-foreground">{s.title}</div>
               </ScrollReveal>
@@ -64,7 +64,7 @@ export function AboutSection({ id }: { id?: string }) {
         </div>
       </section>
 
-      <section className="bg-card border-y border-border">
+      <section className="bg-black/20 backdrop-blur-xl border-y border-white/10">
         <div className="mx-auto max-w-[1400px] grid gap-10 px-6 py-14 md:px-10 lg:grid-cols-2">
           <div>
             <ScrollReveal animation="slide-up">
@@ -94,7 +94,7 @@ export function AboutSection({ id }: { id?: string }) {
                 { quote: "Beautiful park with tall pines, clean facilities, and friendly staff. We loved our stay and will definitely be back!", by: "The Johnson Family", from: "Houston, TX" },
                 { quote: "Quiet, peaceful, and perfect for a long stay. Full hookups, great WiFi, and close to everything we needed.", by: "Richard & Martha P.", from: "Spring, TX" },
               ].map((q, i) => (
-                <ScrollReveal key={q.by} animation="slide-left" delay={300 + (i * 150)} className="rounded-lg border border-border bg-background p-5 shadow-sm">
+                <ScrollReveal key={q.by} animation="slide-left" delay={300 + (i * 150)} className="rounded-lg border border-white/10 bg-black/20 backdrop-blur-xl p-5 shadow-sm">
                   <p className="italic text-foreground">â€œ{q.quote}â€</p>
                   <div className="mt-3 flex gap-0.5 text-gold">
                     {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}

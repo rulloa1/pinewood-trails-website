@@ -55,6 +55,10 @@ function HomePage() {
         <HeroSection />
       </div>
       
+      <div id="about">
+        <AboutSection />
+      </div>
+      
       <div id="amenities">
         <AmenitiesSection />
       </div>
