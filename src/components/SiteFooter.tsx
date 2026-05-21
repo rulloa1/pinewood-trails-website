@@ -41,9 +41,9 @@ export function SiteFooter() {
             <a href="#" aria-label="Instagram" className="rounded-full bg-white/5 p-2.5 hover:bg-[#B07045] hover:text-white transition-all"><Instagram className="h-5 w-5" /></a>
           </div>
           <ul className="mt-6 flex flex-col gap-2 text-sm opacity-90">
-              <li><a href="#sites" className="hover:text-[#B07045] transition-colors flex items-center gap-2"><span className="text-[#B07045] text-xs">▹</span> Sites & Rates</a></li>
+              <li><a href="#about" className="hover:text-[#B07045] transition-colors flex items-center gap-2"><span className="text-[#B07045] text-xs">▹</span> Our Story</a></li>
               <li><a href="#amenities" className="hover:text-[#B07045] transition-colors flex items-center gap-2"><span className="text-[#B07045] text-xs">▹</span> Amenities</a></li>
-              <li><a href="#contact" className="hover:text-[#B07045] transition-colors flex items-center gap-2"><span className="text-[#B07045] text-xs">▹</span> Contact Us</a></li>
+              <li><a href="#sites" className="hover:text-[#B07045] transition-colors flex items-center gap-2"><span className="text-[#B07045] text-xs">▹</span> Sites & Rates</a></li>
           </ul>
         </div>
 

@@ -5,12 +5,10 @@ import { useTheme } from "@/hooks/useTheme";
 
 const nav = [
   { to: "#home", label: "Home" },
+  { to: "#about", label: "Our Story" },
   { to: "#amenities", label: "Amenities" },
   { to: "#sites", label: "Sites & Rates" },
   { to: "#map", label: "Park Map" },
-  { to: "#about", label: "About" },
-  { to: "#rules", label: "Rules" },
-  { to: "#contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
@@ -80,8 +78,8 @@ export function SiteHeader() {
             {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </button>
           <a
-            href="#book"
-            onClick={() => setActiveHash("#book")}
+            href="#sites"
+            onClick={() => setActiveHash("#sites")}
             className="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#B07045] to-[#855030] px-6 py-2.5 font-display text-base font-bold text-white shadow-lg hover:from-[#CD8C5D] hover:to-[#B07045] transition-all hover:scale-105 active:scale-95 border border-[#CD8C5D]/50"
           >
             <Calendar className="h-5 w-5" /> Book Now
@@ -113,10 +111,10 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href="#book"
+              href="#sites"
               onClick={() => {
                 setOpen(false);
-                setActiveHash("#book");
+                setActiveHash("#sites");
               }}
               className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#B07045] to-[#855030] px-6 py-4 font-display font-bold text-white text-lg"
             >
