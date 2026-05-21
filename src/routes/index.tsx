@@ -69,10 +69,6 @@ function HomePage() {
         </ScrollReveal>
       </div>
 
-      <div id="about">
-        <AboutSection />
-      </div>
-
       {/* Sunset cinematic band */}
       <section className="relative h-72 md:h-96 overflow-hidden">
         <img src={sunsetImg} alt="Sunset over Pinewood Trails RV Park" className="absolute inset-0 h-full w-full object-cover object-center animate-[slow-zoom_12s_ease-in-out_infinite_alternate]" />
@@ -90,18 +86,6 @@ function HomePage() {
           <InfoItem icon={<Clock />} title="Office Hours" text="8AM – 5PM, 7 Days a Week" />
         </div>
       </section>
-
-      <div id="rules">
-        <RulesSection />
-      </div>
-
-      <div id="contact">
-        <ContactSection />
-      </div>
-
-      <div id="book">
-        <BookSection />
-      </div>
 
       <SiteFooter />
     </div>
