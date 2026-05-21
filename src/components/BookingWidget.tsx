@@ -1,5 +1,6 @@
 import { Calendar, Users, Truck } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 export function BookingWidget({ variant = "hero" }: { variant?: "hero" | "compact" }) {
   const [form, setForm] = useState({
@@ -11,7 +12,17 @@ export function BookingWidget({ variant = "hero" }: { variant?: "hero" | "compac
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.hash = "#book";
+    toast.promise(
+      new Promise((resolve) => setTimeout(resolve, 800)),
+      {
+        loading: "Searching for available sites...",
+        success: "Found 29 available sites!",
+        error: "Search failed",
+      }
+    );
+    setTimeout(() => {
+      window.location.hash = "#sites";
+    }, 850);
   };
 
   if (variant === "compact") {
@@ -25,7 +36,7 @@ export function BookingWidget({ variant = "hero" }: { variant?: "hero" | "compac
           onChange={(v) => setForm({ ...form, guests: v })} />
         <Field icon={<Truck />} label="RV Length" value={form.length}
           onChange={(v) => setForm({ ...form, length: v })} />
-        <button className="rounded-xl bg-gradient-to-r from-[#d4af37] to-[#aa7c11] px-5 py-3 font-display font-bold text-black shadow-lg hover:from-[#ffdf73] hover:to-[#d4af37] transition-all hover:scale-[1.02] active:scale-95 border border-[#ffdf73]/50" aria-label="Update Search">
+        <button className="rounded-xl bg-gradient-to-r from-[#B07045] to-[#855030] px-5 py-3 font-display font-bold text-white shadow-lg hover:from-[#CD8C5D] hover:to-[#B07045] transition-all hover:scale-[1.02] active:scale-95 border border-[#CD8C5D]/50" aria-label="Update Search">
           Update Search
         </button>
       </form>
@@ -34,13 +45,13 @@ export function BookingWidget({ variant = "hero" }: { variant?: "hero" | "compac
 
   return (
     <div className="w-full max-w-md rounded-3xl bg-black/40 p-8 text-cream shadow-2xl border border-white/10 backdrop-blur-xl group relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#d4af37] to-[#aa7c11] opacity-80" />
+      <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-[#B07045] to-[#855030] opacity-80" />
       <div className="flex items-center justify-center gap-3">
         <span className="text-xl">🌲</span>
         <h3 className="font-display text-2xl font-bold tracking-[0.15em] text-cream drop-shadow">BOOK YOUR STAY</h3>
         <span className="text-xl">🌲</span>
       </div>
-      <p className="text-center font-script text-xl text-[#d4af37] mt-1 mb-6 drop-shadow-sm">Find your perfect spot in the pines</p>
+      <p className="text-center font-script text-xl text-[#B07045] mt-1 mb-6 drop-shadow-sm">Find your perfect spot in the pines</p>
       
       <form onSubmit={submit} className="grid gap-5">
         <div className="grid grid-cols-2 gap-4">
@@ -54,7 +65,7 @@ export function BookingWidget({ variant = "hero" }: { variant?: "hero" | "compac
         <Field icon={<Truck />} label="RV Length" value={form.length}
           onChange={(v) => setForm({ ...form, length: v })} />
         
-        <button className="mt-4 rounded-xl bg-gradient-to-r from-[#d4af37] to-[#aa7c11] px-6 py-4 font-display text-lg font-bold text-black shadow-lg hover:from-[#ffdf73] hover:to-[#d4af37] transition-all hover:scale-[1.02] active:scale-95 border border-[#ffdf73]/50" aria-label="Search Availability">
+        <button className="mt-4 rounded-xl bg-gradient-to-r from-[#B07045] to-[#855030] px-6 py-4 font-display text-lg font-bold text-white shadow-lg hover:from-[#CD8C5D] hover:to-[#B07045] transition-all hover:scale-[1.02] active:scale-95 border border-[#CD8C5D]/50" aria-label="Search Availability">
           Search Availability
         </button>
       </form>
@@ -71,7 +82,7 @@ function Field({
     <label className="block">
       <span className="text-[11px] font-bold uppercase tracking-widest text-cream/70 mb-1.5 block ml-1">{label}</span>
       <div className="flex items-center gap-3 rounded-xl bg-black/30 px-4 py-3.5 border border-white/10 focus-within:border-white/30 focus-within:bg-black/50 transition-colors shadow-inner">
-        <span className="text-[#d4af37] [&>svg]:h-5 [&>svg]:w-5">{icon}</span>
+        <span className="text-[#B07045] [&>svg]:h-5 [&>svg]:w-5">{icon}</span>
         <input
           type={type}
           value={value}

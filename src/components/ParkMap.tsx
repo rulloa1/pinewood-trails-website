@@ -78,7 +78,7 @@ export default function ParkMap() {
         const m = L.marker([s.lat, s.lon], { icon }).bindPopup(`<strong>Site ${label}</strong>`);
         layer.addLayer(m);
       });
-  }, [active]);
+  }, [active, mapLoaded]);
 
   const toggle = (row: number) => {
     setActive((prev) => {

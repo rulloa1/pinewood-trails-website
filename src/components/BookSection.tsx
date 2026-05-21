@@ -1,8 +1,13 @@
 import { Check, ArrowRight } from "lucide-react";
 import sitePT from "@/assets/site-pull-through.jpg";
 import { ScrollReveal } from "./ScrollReveal";
+import { useState } from "react";
+import { BookingCheckoutModal } from "./BookingCheckoutModal";
 
 export function BookSection({ id }: { id?: string }) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const exampleSite = { num: 301, type: "Pull-Through", amp: "50A", price: 52 };
+
   return (
     <div id={id} className="bg-black/40 backdrop-blur-md border-t border-white/10">
       <section className="mx-auto grid max-w-[1000px] gap-10 px-6 py-20 md:px-10 lg:grid-cols-2 items-center">
@@ -12,9 +17,9 @@ export function BookSection({ id }: { id?: string }) {
           <p className="text-cream/80 text-lg mb-8 leading-relaxed">
             Guest information and special requests are handled securely during the reservation process. We offer free cancellation up to 48 hours before check-in.
           </p>
-          <a href="#book" className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 font-display text-lg text-primary-foreground shadow-lg hover:bg-primary-deep transition-all hover:scale-105 active:scale-95">
+          <button onClick={() => setIsModalOpen(true)} className="inline-flex w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 font-display text-lg text-primary-foreground shadow-lg hover:bg-primary-deep transition-all hover:scale-105 active:scale-95">
             Proceed to Reservation <ArrowRight className="h-5 w-5" />
-          </a>
+          </button>
           <div className="mt-4 flex items-center gap-2 text-sm text-cream/60">
             <Check className="h-4 w-4 text-primary" /> Free Cancellation up to 48 hours before check-in
           </div>
@@ -35,6 +40,7 @@ export function BookSection({ id }: { id?: string }) {
         </ScrollReveal>
         
       </section>
+      <BookingCheckoutModal site={exampleSite} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

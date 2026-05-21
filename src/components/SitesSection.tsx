@@ -6,6 +6,8 @@ import { Plug, Droplet, Zap, Waves, Wifi, Trees, Star } from "lucide-react";
 import sitePT from "@/assets/site-pull-through.jpg";
 import siteBI from "@/assets/site-back-in.jpg";
 import { ScrollReveal } from "./ScrollReveal";
+import { useState } from "react";
+import { BookingCheckoutModal } from "./BookingCheckoutModal";
 
 const sites = Array.from({ length: 12 }).map((_, i) => {
   const num = [101, 203, 301, 312, 404, 410, 505, 518, 602, 608, 704, 711][i];
@@ -21,6 +23,8 @@ const sites = Array.from({ length: 12 }).map((_, i) => {
 });
 
 export function SitesSection({ id }: { id?: string }) {
+  const [selectedSite, setSelectedSite] = useState<typeof sites[0] | null>(null);
+
   return (
     <div id={id}>
       <section className="mx-auto max-w-[1400px] px-6 py-16 md:px-10">
@@ -67,7 +71,12 @@ export function SitesSection({ id }: { id?: string }) {
                   <Badge icon={<Zap className="h-3 w-3" />}>{s.amp}</Badge>
                   <Badge icon={<Wifi className="h-3 w-3" />}>WiFi</Badge>
                 </div>
-                <a href="#book" className="mt-4 block rounded-md bg-primary py-2.5 text-center font-display text-primary-foreground hover:bg-primary-deep">Select Site</a>
+                <button 
+                  onClick={(e) => { e.preventDefault(); setSelectedSite(s); }} 
+                  className="mt-4 block w-full rounded-md bg-primary py-2.5 text-center font-display text-primary-foreground hover:bg-primary-deep transition-colors"
+                >
+                  Select Site
+                </button>
               </div>
             </ScrollReveal>
           ))}
@@ -98,6 +107,12 @@ export function SitesSection({ id }: { id?: string }) {
           </div>
         </div>
       </section>
+
+      <BookingCheckoutModal 
+        site={selectedSite} 
+        isOpen={!!selectedSite} 
+        onClose={() => setSelectedSite(null)} 
+      />
     </div>
   );
 }

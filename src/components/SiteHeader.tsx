@@ -30,7 +30,7 @@ export function SiteHeader() {
     <header className="relative z-30 bg-black/40 backdrop-blur-md border-b border-white/10">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 md:px-8 md:py-5">
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="flex items-end gap-1 text-[#d4af37] transition-transform group-hover:scale-105">
+          <div className="flex items-end gap-1 text-[#B07045] transition-transform group-hover:scale-105">
             <svg viewBox="0 0 24 32" className="h-10 w-7 md:h-12 md:w-9" fill="currentColor">
               <path d="M12 0 L4 12 L8 12 L2 22 L8 22 L0 32 L24 32 L16 22 L22 22 L16 12 L20 12 Z" />
             </svg>
@@ -45,7 +45,7 @@ export function SiteHeader() {
             <div className="border-y border-white/20 my-1 text-center text-[10px] md:text-xs tracking-[0.4em] text-cream py-0.5">
               RV PARK
             </div>
-            <div className="font-script text-base md:text-lg text-[#d4af37] text-center drop-shadow">
+            <div className="font-script text-base md:text-lg text-[#B07045] text-center drop-shadow">
               Where folks love to live!
             </div>
           </div>
@@ -61,7 +61,7 @@ export function SiteHeader() {
                 onClick={() => setActiveHash(n.to)}
                 className={`font-display text-lg transition-all ${
                   active
-                    ? "text-cream font-bold underline underline-offset-8 decoration-[#d4af37] decoration-2"
+                    ? "text-cream font-bold underline underline-offset-8 decoration-[#B07045] decoration-2"
                     : "text-cream/70 hover:text-cream hover:scale-105"
                 }`}
               >
@@ -82,7 +82,7 @@ export function SiteHeader() {
           <a
             href="#book"
             onClick={() => setActiveHash("#book")}
-            className="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#d4af37] to-[#aa7c11] px-6 py-2.5 font-display text-base font-bold text-black shadow-lg hover:from-[#ffdf73] hover:to-[#d4af37] transition-all hover:scale-105 active:scale-95 border border-[#ffdf73]/50"
+            className="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#B07045] to-[#855030] px-6 py-2.5 font-display text-base font-bold text-white shadow-lg hover:from-[#CD8C5D] hover:to-[#B07045] transition-all hover:scale-105 active:scale-95 border border-[#CD8C5D]/50"
           >
             <Calendar className="h-5 w-5" /> Book Now
           </a>
@@ -118,7 +118,7 @@ export function SiteHeader() {
                 setOpen(false);
                 setActiveHash("#book");
               }}
-              className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#d4af37] to-[#aa7c11] px-6 py-4 font-display font-bold text-black text-lg"
+              className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#B07045] to-[#855030] px-6 py-4 font-display font-bold text-white text-lg"
             >
               <Calendar className="h-5 w-5" /> Book Now
             </a>
