@@ -34,7 +34,7 @@ export function SitesSection({ id }: { id?: string }) {
         </ScrollReveal>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {sites.map((s, i) => (
-            <ScrollReveal key={s.num} animation="zoom-in" delay={i * 100} className="overflow-hidden rounded-[24px] bg-black/40 backdrop-blur-md shadow-xl border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:bg-black/60">
+            <ScrollReveal key={s.num} animation="zoom-in" delay={i * 100} className="overflow-hidden rounded-[24px] bg-black/20 backdrop-blur-xl shadow-xl border border-white/10 transition-all duration-300 hover:-translate-y-2 hover:bg-black/30">
               <div className="relative group/carousel">
                 <Carousel opts={{ loop: true }}>
                   <CarouselContent>
@@ -84,7 +84,7 @@ export function SitesSection({ id }: { id?: string }) {
       </section>
 
       {/* Rates table */}
-      <section className="bg-black/40 backdrop-blur-md border-y border-white/10">
+      <section className="bg-black/20 backdrop-blur-xl border-y border-white/10">
         <div className="mx-auto max-w-[1400px] px-6 py-14 md:px-10">
           <ScrollReveal animation="slide-up">
             <SectionTitle>RATES</SectionTitle>

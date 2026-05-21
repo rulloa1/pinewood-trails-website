@@ -29,7 +29,7 @@ export function GlowingCard({
       
       {/* Elegant Frosted Glass Card */}
       <div 
-        className="relative w-full h-full rounded-[24px] z-10 overflow-hidden flex flex-col border border-white/10 bg-black/40 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-black/50"
+        className="relative w-full h-full rounded-[24px] z-10 overflow-hidden flex flex-col border border-white/10 bg-black/20 backdrop-blur-xl shadow-2xl transition-all duration-500 group-hover:-translate-y-2 group-hover:bg-black/30"
       >
         {/* Subtle top border highlight matching the gradient */}
         <div className="absolute top-0 left-0 w-full h-[2px] opacity-80" style={{ background: gradient }} />

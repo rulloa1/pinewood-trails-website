@@ -80,7 +80,7 @@ function HomePage() {
       </section>
 
       {/* Info strip */}
-      <section className="border-y border-border bg-background/40 backdrop-blur-md relative z-10">
+      <section className="border-y border-white/10 bg-black/20 backdrop-blur-xl relative z-10">
         <div className="mx-auto grid max-w-[1400px] items-center gap-6 px-6 py-6 md:grid-cols-2 md:px-10">
           <InfoItem icon={<Phone />} title="Call Us Today!" text="832-521-3345 | 832-671-5999" />
           <InfoItem icon={<Clock />} title="Office Hours" text="8AM – 5PM, 7 Days a Week" />
