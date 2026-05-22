@@ -39,7 +39,7 @@ export function AboutSection({ id }: { id?: string }) {
 
         <ScrollReveal animation="zoom-in" delay={150} className="lg:col-span-1">
           <div className="relative h-full w-full rounded-xl shadow-md overflow-hidden group">
-            <img src={pineRoad} alt="Pine road" className="h-full max-h-[420px] w-full object-cover" loading="lazy" />
+            <img src={pineRoad} alt="Pine road" className="h-full max-h-[300px] md:max-h-[420px] w-full object-cover" loading="lazy" />
             
             {/* Animated Sun Element */}
             <div className="absolute top-[10%] left-[45%] md:left-[35%] w-32 h-32 rounded-full bg-[#ffdf73] mix-blend-overlay animate-sun-shine pointer-events-none" />
@@ -52,7 +52,7 @@ export function AboutSection({ id }: { id?: string }) {
           <ScrollReveal animation="slide-up" delay={200}>
             <SectionTitle className="!justify-start">WHAT MAKES US SPECIAL</SectionTitle>
           </ScrollReveal>
-          <div className="mt-6 grid grid-cols-2 gap-3">
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
             {special.map((s, i) => (
               <ScrollReveal key={s.title} animation="zoom-in" delay={300 + (i * 100)} className="rounded-lg border border-white/10 bg-black/20 backdrop-blur-xl p-4 text-center shadow-sm hover:shadow-md hover:bg-black/30 hover:scale-[1.02] transition-all cursor-default">
                 <s.icon className="mx-auto h-7 w-7 text-primary" />

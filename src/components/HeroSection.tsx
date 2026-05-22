@@ -12,9 +12,9 @@ export function HeroSection() {
           <BookingWidget />
         </div>
         <div className="order-1 md:order-2 text-cream animate-in slide-in-from-right-8 duration-[1500ms] delay-300 fill-mode-both">
-          <h1 className="font-display text-5xl md:text-7xl font-bold leading-[1.05] drop-shadow-xl text-white">
+          <h1 className="font-display text-4xl md:text-7xl font-bold leading-[1.05] drop-shadow-xl text-white">
             Relax. Explore.<br />
-            <span className="font-script text-6xl md:text-8xl font-medium text-[#B07045] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">Stay Awhile.</span>
+            <span className="font-script text-5xl md:text-8xl font-medium text-[#B07045] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">Stay Awhile.</span>
           </h1>
           <p className="mt-6 max-w-md text-xl text-cream/90 drop-shadow-md leading-relaxed font-medium">
             Experience the tranquility of the Eastern White Pines in Magnolia, Texas.

@@ -54,7 +54,7 @@ export function BookingWidget({ variant = "hero" }: { variant?: "hero" | "compac
       <p className="text-center font-script text-xl text-[#B07045] mt-1 mb-6 drop-shadow-sm">Find your perfect spot in the pines</p>
       
       <form onSubmit={submit} className="grid gap-5">
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Field icon={<Calendar />} label="Check-in" type="date" value={form.checkin}
             onChange={(v) => setForm({ ...form, checkin: v })} />
           <Field icon={<Calendar />} label="Check-out" type="date" value={form.checkout}

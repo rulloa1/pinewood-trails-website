@@ -34,10 +34,10 @@ export function AmenitiesSection() {
       </div>
       
       <ScrollReveal animation="slide-up" delay={200}>
-        <div className="mt-12 inline-flex items-center gap-3 rounded-[24px] border border-white/10 bg-black/40 backdrop-blur-md px-8 py-4 shadow-lg hover:shadow-xl transition-all">
+        <div className="mt-12 flex flex-col sm:flex-row items-center gap-3 rounded-[24px] border border-white/10 bg-black/40 backdrop-blur-md px-6 py-4 sm:px-8 shadow-lg hover:shadow-xl transition-all">
           <span className="text-xl">🌲</span>
-          <span className="font-script text-3xl text-cream drop-shadow-md">Where folks love to live!</span>
-          <span className="text-xl">🌲</span>
+          <span className="font-script text-2xl sm:text-3xl text-cream drop-shadow-md text-center">Where folks love to live!</span>
+          <span className="text-xl hidden sm:block">🌲</span>
         </div>
       </ScrollReveal>
     </section>
