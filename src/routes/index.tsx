@@ -8,17 +8,15 @@ import { RulesSection } from "@/components/RulesSection";
 import { AboutSection } from "@/components/AboutSection";
 import { SitesSection } from "@/components/SitesSection";
 import { ContactSection } from "@/components/ContactSection";
-import { BookSection } from "@/components/BookSection";
 import PinewoodTrailsMap from "@/components/PinewoodTrailsMap";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Calendar, Clock, Phone } from "lucide-react";
 import sunsetImg from "@/assets/park-sunset.png";
 import heroVideo from "@/assets/hero-stars.mp4";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Pinewood Trails RV Park â€” Magnolia, TX" },
+      { title: "Pinewood Trails RV Park — Magnolia, TX" },
       { name: "description", content: "Spacious RV sites, modern amenities, and the peace of the Eastern White Pines in Magnolia, Texas. Book your stay at Pinewood Trails RV Park." },
     ],
   }),
@@ -63,6 +61,10 @@ function HomePage() {
         <AmenitiesSection />
       </div>
 
+      <div id="rules">
+        <RulesSection />
+      </div>
+
       <div id="sites">
         <SitesSection />
       </div>
@@ -83,7 +85,9 @@ function HomePage() {
         </ScrollReveal>
       </section>
 
-
+      <div id="contact">
+        <ContactSection />
+      </div>
 
       <SiteFooter />
     </div>

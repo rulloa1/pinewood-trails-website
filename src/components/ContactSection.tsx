@@ -25,7 +25,7 @@ export function ContactSection({ id }: { id?: string }) {
                 <div className="text-2xl font-bold text-foreground">832-671-5999</div>
               </Info>
               <Info icon={<Clock />} title="Office Hours">
-                <div>Monday â€“ Sunday</div><div>8AM â€“ 5PM</div>
+                <div>Monday – Sunday</div><div>8AM – 5PM</div>
               </Info>
               <Info icon={<AlertCircle />} title="After-Hours Emergency">
                 <div className="text-xl font-bold text-foreground">832-671-5999</div>

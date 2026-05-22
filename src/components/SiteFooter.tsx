@@ -45,6 +45,7 @@ export function SiteFooter() {
               <li><a href="#about" className="hover:text-[#B07045] transition-colors flex items-center gap-2"><span className="text-[#B07045] text-xs">▹</span> Our Story</a></li>
               <li><a href="#amenities" className="hover:text-[#B07045] transition-colors flex items-center gap-2"><span className="text-[#B07045] text-xs">▹</span> Amenities</a></li>
               <li><a href="#sites" className="hover:text-[#B07045] transition-colors flex items-center gap-2"><span className="text-[#B07045] text-xs">▹</span> Sites & Rates</a></li>
+              <li><a href="#contact" className="hover:text-[#B07045] transition-colors flex items-center gap-2"><span className="text-[#B07045] text-xs">▹</span> Contact</a></li>
           </ul>
         </ScrollReveal>
 
