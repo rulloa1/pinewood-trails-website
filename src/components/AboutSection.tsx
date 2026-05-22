@@ -35,7 +35,6 @@ export function AboutSection({ id }: { id?: string }) {
             <p>Our family-owned park is built on the values of hospitality, community, and care. We're committed to providing a clean, safe, and welcoming environment where guests can relax, recharge, and feel right at home.</p>
             <p>Whether you're here for a weekend or a season, we're glad you're part of the Pinewood Trails family.</p>
           </div>
-          <a href="#book" className="mt-6 inline-flex rounded-md bg-primary px-6 py-3 font-display text-primary-foreground hover:bg-primary-deep">Book Your Stay</a>
         </ScrollReveal>
 
         <ScrollReveal animation="zoom-in" delay={150} className="lg:col-span-1">
