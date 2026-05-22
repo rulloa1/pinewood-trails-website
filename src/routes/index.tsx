@@ -83,32 +83,11 @@ function HomePage() {
         </ScrollReveal>
       </section>
 
-      {/* Info strip */}
-      <section className="border-y border-white/10 bg-black/20 backdrop-blur-xl relative z-10">
-        <div className="mx-auto grid max-w-[1400px] items-center gap-6 px-6 py-6 md:grid-cols-2 md:px-10">
-          <ScrollReveal animation="slide-up">
-            <InfoItem icon={<Phone />} title="Call Us Today!" text="832-521-3345 | 832-671-5999" />
-          </ScrollReveal>
-          <ScrollReveal animation="slide-up" delay={200}>
-            <InfoItem icon={<Clock />} title="Office Hours" text="8AM – 5PM, 7 Days a Week" />
-          </ScrollReveal>
-        </div>
-      </section>
+
 
       <SiteFooter />
     </div>
   );
 }
 
-function InfoItem({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
-  return (
-    <div className="flex items-center gap-3 hover:-translate-y-0.5 transition-transform">
-      <span className="rounded-full bg-primary p-3 text-primary-foreground [&>svg]:h-5 [&>svg]:w-5 shadow-sm">{icon}</span>
-      <div>
-        <div className="font-display text-foreground">{title}</div>
-        <div className="text-sm text-muted-foreground">{text}</div>
-      </div>
-    </div>
-  );
-}
 
