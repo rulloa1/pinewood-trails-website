@@ -2,10 +2,20 @@ import { Calendar, Users, Truck } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
+function defaultDates() {
+  const checkin = new Date();
+  checkin.setDate(checkin.getDate() + 1);
+  const checkout = new Date(checkin);
+  checkout.setDate(checkout.getDate() + 4);
+  const fmt = (d: Date) => d.toISOString().slice(0, 10);
+  return { checkin: fmt(checkin), checkout: fmt(checkout) };
+}
+
 export function BookingWidget({ variant = "hero" }: { variant?: "hero" | "compact" }) {
+  const { checkin: defaultCheckin, checkout: defaultCheckout } = defaultDates();
   const [form, setForm] = useState({
-    checkin: "2025-05-26",
-    checkout: "2025-05-30",
+    checkin: defaultCheckin,
+    checkout: defaultCheckout,
     guests: "2 Adults",
     length: "Up to 40 ft",
   });

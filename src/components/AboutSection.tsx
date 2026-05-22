@@ -94,11 +94,11 @@ export function AboutSection({ id }: { id?: string }) {
                 { quote: "Quiet, peaceful, and perfect for a long stay. Full hookups, great WiFi, and close to everything we needed.", by: "Richard & Martha P.", from: "Spring, TX" },
               ].map((q, i) => (
                 <ScrollReveal key={q.by} animation="slide-left" delay={300 + (i * 150)} className="rounded-lg border border-white/10 bg-black/20 backdrop-blur-xl p-5 shadow-sm">
-                  <p className="italic text-foreground">â€œ{q.quote}â€</p>
+                  <p className="italic text-foreground">“{q.quote}”</p>
                   <div className="mt-3 flex gap-0.5 text-gold">
                     {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
                   </div>
-                  <div className="mt-2 text-sm text-muted-foreground">â€” {q.by}, {q.from}</div>
+                  <div className="mt-2 text-sm text-muted-foreground">— {q.by}, {q.from}</div>
                 </ScrollReveal>
               ))}
             </div>

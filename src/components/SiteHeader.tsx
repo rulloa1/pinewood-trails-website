@@ -9,6 +9,7 @@ const nav = [
   { to: "#amenities", label: "Amenities" },
   { to: "#sites", label: "Sites & Rates" },
   { to: "#map", label: "Park Map" },
+  { to: "#contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
